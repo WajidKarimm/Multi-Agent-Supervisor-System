@@ -1,0 +1,61 @@
+{
+  "thread_id": "api-test-1",
+  "saved_at": "2026-03-30T12:59:34.865999Z",
+  "trace": [
+    {
+      "step_id": "42744c31-a9d8-45ca-a987-364835e5e854",
+      "agent": "supervisor",
+      "input": {
+        "query": "Compute 2+2 using python_eval and briefly say the result."
+      },
+      "routing_decision": {
+        "next_agent": "analyst",
+        "reason": "The request needs computation/analysis."
+      },
+      "tool_outputs": [],
+      "llm_token_total": 268,
+      "summary": "Routing decision: analyst"
+    },
+    {
+      "step_id": "11d8925c-26e1-45d1-b395-44e56287db5f",
+      "agent": "analyst",
+      "input": {
+        "query": "Compute 2+2 using python_eval and briefly say the result."
+      },
+      "routing_decision": null,
+      "tool_outputs": [
+        {
+          "tool": "python_eval",
+          "output": "4"
+        }
+      ],
+      "llm_token_total": 779,
+      "summary": "The result of the computation is 4."
+    },
+    {
+      "step_id": "350ebacd-6188-4f33-ae67-b52816c194d8",
+      "agent": "supervisor",
+      "input": {
+        "query": "Compute 2+2 using python_eval and briefly say the result."
+      },
+      "routing_decision": {
+        "next_agent": "final",
+        "reason": "Computation result is available"
+      },
+      "tool_outputs": [],
+      "llm_token_total": 328,
+      "summary": "Routing decision: final"
+    },
+    {
+      "step_id": "400d910e-c2c0-42b6-82f3-d30c4382a68d",
+      "agent": "final",
+      "input": {
+        "query": "Compute 2+2 using python_eval and briefly say the result."
+      },
+      "routing_decision": null,
+      "tool_outputs": [],
+      "llm_token_total": 221,
+      "summary": "The result of the computation 2+2 is 4. This is confirmed by the python_eval tool output, which states \"4\"."
+    }
+  ]
+}

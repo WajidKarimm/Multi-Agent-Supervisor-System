@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+
+langgraph
+langchain-core
+langchain-groq
+langchain-google-genai
+
+duckduckgo-search
+requests
+langgraph-checkpoint-sqlite
+ddgs
