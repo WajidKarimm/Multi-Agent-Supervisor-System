@@ -129,7 +129,6 @@ If the user request is ambiguous (“compare”, “summarize”, “compute”)
 - Or alternatively, choose a default format (e.g., bullet summary + explicit numeric calculations) and mention assumptions.
 
 ---
-
 ### Evidence of API evaluability
 The FastAPI layer returns:
 - `final_answer`
